@@ -1,3 +1,93 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26bc71f163ca6614ba611496a7549c90bc0b6430c53b00503b0ce0694e09097e
-size 3569
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="./css/audio.css">
+</head>
+<body background="./images/bg0.png">
+    <!-- 上半部分 -->
+    <div class="upper-container">
+        <!-- 唱片 -->
+        <div class="record-container">
+            <div class="record-bg">
+                <div class="rotate-play">唱片图片</div>
+            </div>
+        </div>
+        <!-- 歌曲名 -->
+        <div class="introduction-container">
+            <div class="text-container">
+                <div class="music-name">音乐名</div>
+                <div class="author-container">作者：
+                    <span class="author-name">作者名</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 下半部分 -->
+    <div class="audio-box">
+        <div class="audio-container">
+            <audio id="audio"></audio>
+            <!-- 进度条 -->
+            <div class="a-progress">
+                <div class="pgs-total">
+                    <div class="pgs-play"></div>
+                </div>
+            </div>
+            <!-- 控制按钮 -->
+            <div class="a-control">
+                <!-- 播放时间 -->
+                <div class="time-container">
+                    <span class="play-time">00:00</span>&nbsp;/&nbsp;
+                    <span class="audio-time">00:00</span>
+                </div>
+                <!-- 下排中间按钮 -->
+                <div class="center-button-container">
+                    <!-- 切换模式按钮 -->
+                    <div class="center-icon mode"></div>
+                    <!-- 上一首 -->
+                    <div class="center-icon s-left"></div>
+                    <!-- 播放/暂停按钮 -->
+                    <div class="center-icon icon-play"></div>
+                    <!-- 下一首 -->
+                    <div class="center-icon s-right"></div>
+                    <!-- 音量按钮 -->
+                    <div class="center-icon volume"></div>
+                    <!-- 音量进度条 -->
+                    <!-- range表示一个可调的范围 -->
+                    <input id="volumn-togger" type="range" name="change" min="0" max="100" step="1" value="50">
+                </div>
+                <!-- 右下角区域按钮 -->
+                <div class="bottom-button-container">
+                    <!-- 列表 -->
+                    <div class="button-icon list" id="list"></div>
+                    <!-- 倍速 -->
+                    <div class="speed">1.0x</div>
+                    <!-- mv播放按钮 -->
+                    <div class="button-icon MV"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 音乐列表 -->
+    <div class="close-list" id="close"></div>
+    <div class="music-list" id="music-list">
+        <div class="music-list-container">
+            <div class="music-list-title">音乐列表</div>
+            <hr class="line">
+            <div class="all-list">
+                <div class="music0">Call of Silence</div>
+                <div class="music1">繁星、新生，与你</div>
+                <div class="music2">第五十七次取消发送</div>
+                <div class="music3">23215220225</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./js/audio.js"></script>
+</body>
+</html>
