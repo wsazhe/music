@@ -1,0 +1,368 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height: 100%;
+    background-size: cover;
+    /* 模糊背景 */
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+}
+.upper-container {
+    width: 80%;
+    height: 80%;
+    padding-left: 10%;
+}
+.record-container {
+    width: 50%;
+    height: 100%;
+    float: left;
+    /* 垂直居中对齐 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introduction-container {
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record-bg{
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    position: absolute;
+       /* 垂直居中对齐 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rotate-play {
+    width: 250px;
+    height: 250px;
+    background-size:cover;
+    border-radius: 100%; 
+    background-image:url("../images/record0.jpg");
+}   
+.text-container {
+    width: 80%;
+    padding-left: 20%;
+}
+/* 改变字体大小 */
+.music-name {
+    font-size: 4rem;
+    color:white;
+}
+.author-container {
+    /* 根据页面大小调整字体大小 */
+    font-size: medium;
+    color: gray;
+}
+/* 下半部分 */
+.audio-box{
+    width: 100%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.audio-container{
+    width: 90%;
+    height:20%;   
+}
+.a-progress{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.pgs-total{
+    width: 100%;
+    /* 这里高度设置大一些，为了用户可以更容易点击进度条 */
+    height:13px;
+    border-radius: 10px;    
+    position: relative;
+    background-color: gray;
+}
+.pgs-play{
+    /* 填充到上面的盒子里 */
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: green;
+}
+/* 进度条的绿色部分 */
+/* .pgs-play::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    bottom: 7px;
+    right: 0;
+    background-color: #42b680;
+    border-radius: 10px;
+    z-index: 1;
+} */
+.center-button-container{
+    width: 40%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pgs-play::after{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    bottom: 7px;
+    right: 0;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: white;
+}
+.time-container{
+    width: 30%;
+    color: white;
+    font-weight: 300;
+    float: left;
+}
+
+.a-control{
+    width: 100%;
+}
+.center-icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.center-button-container{
+    margin: 0px;
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.a-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mode{
+    background-image:url("../images/mode1.png");
+    background-size: 100% 100%;
+}
+.icon-play{
+    width: 50px;
+    height: 50px;
+    background-image:url("../images/继续播放.png");
+    background-size: 100% 100%;
+}
+.icon-pause{
+    width: 50px;
+    height: 50px;
+    background-image:url("../images/暂停.png");
+    background-size: 100% 100%;
+}
+.s-left{
+    background-image: url("../images/上一首.png");    
+    background-size: 100% 100%;
+}
+.s-right{
+    background-image: url("../images/下一首.png");
+    background-size: 100% 100%;
+}
+.volume{
+    background-image:url("../images/音量.png");
+    background-size: 100% 100%;
+}
+
+/* 右下角区域 */
+.buttom-button-container{
+    width: 30%;
+    float: left;
+    text-align: right;
+    padding-top: 10px;
+
+}
+.list{
+    background-image: url("../images/列表.png");
+    background-size: 100% 100%;
+}
+.MV{
+    background-image: url("../images/MV.png");
+    background-size: 100% 100%;
+}
+.button-icon{
+    float: right;
+    width:20px;
+    height:20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.button-icon:hover{
+    opacity: 0.7;
+}
+.button-icon:active{
+    opacity: 0.6;
+}
+.speed{
+    float:right;
+    color: white;
+    margin:0 10px 0 10px
+}
+.speed:hover{
+    opacity: 0.7;
+}
+.speed:active{
+    opacity: 0.6;
+}
+.center-icon:hover{
+    opacity: 0.7;
+}
+.center-icon:hover{
+    opacity: 0.6;
+}
+.close-list{
+    display: none;
+    width: 75%;
+    height: 100%;
+    /* 固定左上角 */
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: transparent;
+}
+/* 音乐列表 */
+.music-list{
+    display: none;
+    width: 25%;
+    height: 100%;
+    background-color:rgb(29,40,32);
+    /* 不让他掉下去 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index:2;
+}
+.music-list-container{
+    width: 100%;
+}
+.music-list-title{
+    color:white;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 10% 15% 0 15%;
+}
+.line{
+    height:1px;
+    width: 70%;
+    border: none;
+    border-top: 1px dashed gray;
+}
+.all-list div{
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-weight: 300;
+    padding: 0 15% 0 15%;
+}
+.all-list div:hover{
+    background-color: gray;
+}
+
+
+/* 音量控制 */
+#volumn-togger{
+    width: 100px;
+    height:5px;
+    appearance:none;
+    background-color: #dcdcdc;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px #dcdcdc;
+}
+#volumn-togger::-webkit-slider-thumb {
+    width: 1px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #42b680;
+    cursor: pointer;
+    border: 4px solid #fff;
+    box-shadow: -407px 0 0 407px #42b680;
+}
+.list-card-show{
+    animation: showAni 1s;
+    animation-fill-mode: forwards;
+}
+
+.list-card-hide{
+    animation: hideAni 1s;
+    animation-fill-mode: forwards;
+}
+
+
+/* 动画-唱片 */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.rotate-play {
+    animation-play-state:paused;
+    animation: rotate 10s linear infinite;
+}
+/* 音乐列表展开动画 */
+@keyframes showAni{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* 音乐列表收起动画 */
+@keyframes hideAni{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+/* Flex布局系统
+.record-container, .introduction-container, 
+.center-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 浮动系统 */
+/* .record-container, .introduction-container {
+  float: left;
+  width: 50%;
+} */
+
+/* 定位系统 */
+/* .music-list {
+  position: fixed;
+  top: 0;
+  right: 0;
+} */ 
+
+
+
